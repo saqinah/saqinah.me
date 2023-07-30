@@ -17,11 +17,16 @@ class EmployeeModel extends Model
         'employee_name',
         'employee_email',
         'employee_position',
-        'employee_department',
         'department_id'
     ];
 
-    public function employee_dept(){
-        return $this->hasOne('App\Models\DepartmentModel', 'id');
+    public function employee_dept()
+    {
+        return $this->belongsTo('App\Models\DepartmentModel', 'department_id');
+    }
+
+    public function getDisplayName()
+    {
+        return $this->employee_dept->dept_name ?? 'Unknown Department';
     }
 }

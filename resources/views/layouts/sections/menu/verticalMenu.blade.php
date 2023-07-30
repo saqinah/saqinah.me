@@ -79,11 +79,11 @@
 			</span>
 		</li>
 		<li class="menu-item">
-			<a href="#" class="menu-link">
-				<div>List Employee</div>
+			<a href="{{ route('EmployeeList') }}" class="menu-link">
+				<div>List of Employee</div>
 			</a>
-			<a href="{{ route('DepartmentForm') }}" class="menu-link">
-				<div>New Department</div>
+			<a href="{{ route('DepartmentList') }}" class="menu-link">
+				<div>LIst of Department</div>
 			</a>
 			<a href="{{ route('EmployeeForm') }}" class="menu-link">
 				<div>New Employee</div>
