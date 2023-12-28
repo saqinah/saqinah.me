@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PortfolioSaqinahController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 $controller_path = 'App\Http\Controllers';
 
 // Main Page Route
-Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+// Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+Route::controller(PortfolioSaqinahController::class)->group(function () {
+  Route::get('/', 'PortfolioSaqinah')->name('portfolio-saqinah');
+});
 
 // layout
 Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');
