@@ -8,7 +8,7 @@
 
 @section('content')
 <h4 class="fw-bold py-3 mb-4">
-	<span class="text-muted fw-light">New /</span> Department Information
+	<span class="text-muted fw-light">List /</span> Department Information
 </h4>
 
 <div class="row">
@@ -49,39 +49,11 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="col-md-12">
-		<div class="card mb-4">
-			<form action="{{ route('StoreDepartment') }}" method="POST" class="form-horizontal" autocomplete="off">
-			@csrf
-				<h5 class="card-header">Department Information</h5>
-				<hr>
-
-				<div class="card-body">
-					<div class="row">
-						<div class="col-md-12 mb-1">
-							<label for="defaultFormControlInput" class="form-label">Department Name</label>
-							<input type="text" class="form-control" name="dept_name" id="dept_name" placeholder="Testing Department">
-						</div>
-
-						<div class="col-md-12 mb-1">
-							<label for="defaultFormControlInput" class="form-label">Department Name</label>
-							<input type="text" class="form-control" name="display_name" id="display_name">
-						</div>
-					</div>
-				</div>
-
-				<div class="card-footer">
-					<button type="submit" class="btn btn-success float-end mb-2">Submit</button>
-				</div>
-			</form>
-		</div>
-	</div>
 </div>
 @endsection
 
 @section('script')
 <script>
-	
+
 </script>
 @endsection
